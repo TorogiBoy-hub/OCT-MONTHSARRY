@@ -3,10 +3,10 @@
   window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
   const FRAME_RATE = 60
-  const PARTICLE_NUM = 3000
+  const PARTICLE_NUM = 2000
   const RADIUS = Math.PI * 2
   const CANVASWIDTH = 1500
-  const CANVASHEIGHT = 450
+  const CANVASHEIGHT = 800
   const CANVASID = 'canvas'
 
   let texts = ['MAHAL', 'EVERY', 'MOMENT', 'WITH YOU', 'IS A BLESSING', 'ILL FOREVER', 'TREASURE.', '. . . . . . .', 'GUSTO KONG', 'SABIHIN NA', 'SORRY', 'KUNG MAY', 'MGA', 'PAGKUKULANG', 'AKO',
