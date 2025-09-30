@@ -12,8 +12,7 @@
   let texts = ['MAHAL', 'EVERY', 'MOMENT', 'WITH YOU', 'IS A BLESSING', 'ILL FOREVER', 'TREASURE.', '. . . . . . .', 'GUSTO KONG', 'SABIHIN NA', 'SORRY', 'KUNG MAY', 'MGA', 'PAGKUKULANG', 'AKO',
                'BUT PLEASE', 'KNOW', 'IM TRYING MY', 'BEST FOR US', 'AND FOR OUR', 'FUTURE', 'TOGETHER.', '. . . . . . .',  'THANK YOU', 'FOR', 'YOUR LOVE', 'PATIENCE', 'AND',
                'UNDERSTANDING', '. . . . . . .', 'I PROMISE', 'TO KEEP', 'CHOOSING YOU', 'LOVING YOU', 'AND', 'WORKING HARD', 'PARA SA ATIN', 'NGAYON', 'AT PALAGI.', '. . . . . . .', 'MAHAL',
-               'HAPPY', 'MONTHSARRY', 'I LOVE YOU ❤️',
-   ]
+               'HAPPY', 'MONTHSARRY', 'I LOVE YOU ❤️',]
 
   let canvas,
     ctx,
@@ -21,7 +20,7 @@
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = 70
+    textSize = 0
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
