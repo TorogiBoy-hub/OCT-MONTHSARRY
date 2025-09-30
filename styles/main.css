@@ -99,3 +99,21 @@ a:hover {
 #canvas{
     margin: 0 auto;
 }
+
+/* Make canvas fill the screen */
+#universe, #canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#universe {
+  z-index: -2; /* stars stay in the background */
+}
+
+#canvas {
+  z-index: -1; /* text particles stay above stars */
+}
