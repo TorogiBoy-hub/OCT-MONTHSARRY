@@ -5,8 +5,8 @@
   const FRAME_RATE = 60
   const PARTICLE_NUM = 2000
   const RADIUS = Math.PI * 2
-  const CANVASWIDTH = window.innerWidth   // responsive width
-  const CANVASHEIGHT = window.innerHeight // responsive height
+  const CANVASWIDTH = 500
+  const CANVASHEIGHT = 150
   const CANVASID = 'canvas'
 
   let texts = ['MAHAL', 'EVERY', 'MOMENT', 'WITH YOU', 'IS A BLESSING', 'ILL FOREVER', 'TREASURE.', '. . . . . . .', 'GUSTO KONG', 'SABIHIN NA', 'SORRY', 'KUNG MAY', 'MGA', 'PAGKUKULANG', 'AKO',
@@ -21,7 +21,7 @@
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = Math.min(window.innerWidth / 10, 70) // responsive text size
+    textSize = 0
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
@@ -111,11 +111,11 @@
     canvas.width = CANVASWIDTH
     canvas.height = CANVASHEIGHT
     canvas.style.position = 'absolute'
-    canvas.style.left = '0'
-    canvas.style.top = '0'
-    canvas.style.right = '0'
-    canvas.style.bottom = '0'
-    canvas.style.margin = '0'
+    canvas.style.left = '0%'
+    canvas.style.top = '0%'
+    canvas.style.bottom = '0%'
+    canvas.style.right = '0%'
+    canvas.style.marginTop = window.innerHeight * .15 + 'px'
   }
 
   function event () {
@@ -126,6 +126,7 @@
         return
       }
       text = texts[textIndex]
+      console.log(textIndex)
     }, false)
 
     document.addEventListener('touchstart', function (e) {
@@ -135,6 +136,7 @@
         return
       }
       text = texts[textIndex]
+      console.log(textIndex)
     }, false)
   }
 
@@ -158,15 +160,23 @@
     constructor (canvas) {
       let spread = canvas.height
       let size = Math.random() * 1.2
+      // 速度
       this.delta = 0.06
+      // 现在的位置
       this.x = 0
       this.y = 0
+      // 上次的位置
       this.px = Math.random() * canvas.width
       this.py = (canvas.height * 0.5) + ((Math.random() - 0.5) * spread)
+      // 记录点最初的位置
       this.mx = this.px
       this.my = this.py
+      // 点的大小
       this.size = size
+      // this.origSize = size
+      // 是否用来显示字
       this.inText = false
+      // 透明度相关
       this.opacity = 0
       this.fadeInRate = 0.005
       this.fadeOutRate = 0.03
@@ -178,7 +188,7 @@
       this.fadingIn = this.opacity > this.opacityTresh ? false : true
       if (this.fadingIn) {
         this.opacity += this.fadeInRate
-      } else {
+      }else {
         this.opacity = 1
       }
     }
@@ -189,7 +199,7 @@
         if (this.opacity < 0) {
           this.opacity = 0
         }
-      } else {
+      }else {
         this.opacity = 0
       }
     }
@@ -201,6 +211,14 @@
       ctx.fill()
     }
   }
-
-  init()
+  
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+  }
+  
+  // setTimeout(() => {
+    init()  
+  // }, 4000);
+  // mp3.play()
 })(window)
