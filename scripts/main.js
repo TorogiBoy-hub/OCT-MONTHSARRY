@@ -6,7 +6,7 @@
   const PARTICLE_NUM = 2000
   const RADIUS = Math.PI * 2
   const CANVASWIDTH = 500
-  const CANVASHEIGHT = 800
+  const CANVASHEIGHT = 150
   const CANVASID = 'canvas'
 
   let texts = ['MAHAL', 'EVERY', 'MOMENT', 'WITH YOU', 'IS A BLESSING', 'ILL FOREVER', 'TREASURE.', '. . . . . . .', 'GUSTO KONG', 'SABIHIN NA', 'SORRY', 'KUNG MAY', 'MGA', 'PAGKUKULANG', 'AKO',
@@ -20,7 +20,7 @@
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = 70
+    textSize = 50
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
