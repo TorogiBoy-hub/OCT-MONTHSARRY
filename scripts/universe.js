@@ -18,6 +18,8 @@ var universe;
 
 windowResizeHandler();
 window.addEventListener('resize', windowResizeHandler, false);
+window.addEventListener('orientationchange', windowResizeHandler, false); // ✅ added
+
 
 createUniverse();
 
