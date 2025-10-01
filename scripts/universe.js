@@ -1,6 +1,5 @@
 windowResizeHandler();
 window.addEventListener('resize', windowResizeHandler, false);
-window.addEventListener('orientationchange', windowResizeHandler, false); // ✅ added
 
 var starDensity = .216;
 var speedCoeff = .05;
