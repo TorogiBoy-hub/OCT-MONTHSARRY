@@ -41,7 +41,6 @@ body {
     height: 100% auto;
 }
 
-/* Universe stars background */
 #universe {
     position: fixed;
     top: 0;
@@ -102,7 +101,6 @@ a:hover {
     }
 }
 
-/* Particle text */
 #canvas {
     position: fixed;
     top: 0;
