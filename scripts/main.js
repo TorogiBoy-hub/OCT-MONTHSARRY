@@ -106,16 +106,16 @@
     }
   }
 
-function setDimensions () {
-    CANVASWIDTH = window.innerWidth;
-    CANVASHEIGHT = window.innerHeight;
-    canvas.width = CANVASWIDTH;
-    canvas.height = CANVASHEIGHT;
-    canvas.style.position = 'absolute';
-    canvas.style.left = '0';
-    canvas.style.top = '0';
-}
-
+  function setDimensions () {
+    canvas.width = CANVASWIDTH
+    canvas.height = CANVASHEIGHT
+    canvas.style.position = 'absolute'
+    canvas.style.left = '0%'
+    canvas.style.top = '0%'
+    canvas.style.bottom = '0%'
+    canvas.style.right = '0%'
+    canvas.style.marginTop = window.innerHeight * .15 + 'px'
+  }
 
   function event () {
     document.addEventListener('click', function (e) {
