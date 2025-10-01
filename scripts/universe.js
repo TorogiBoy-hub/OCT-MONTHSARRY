@@ -1,5 +1,5 @@
-windowResizeHandler();
-window.addEventListener('resize', windowResizeHandler, false);
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var starDensity = .216;
 var speedCoeff = .05;
